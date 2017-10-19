@@ -30,6 +30,108 @@ $media-expressions: (
 @import 'base/typography';
 @import 'base/forms';
 
-#wrapper {
-  max-width: 1000px;
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  list-style: none;
+  font-family: 'Vollkorn', serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.container{
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+header{
+  background-color: #ffffff;
+}
+header {
+  .logo {
+    padding: 10px 10px;
+    text-align: center;
+    span {
+      color: #cd2027;
+      font-size: 25px;
+      font-weight: 400;
+      vertical-align: super;
+    }
+  }
+  .call {
+    text-align: center;
+    padding-bottom: 10px;
+    span {
+      color: #cd2027;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+}
+.wrapper-hero{
+  background-color: #fcfcfc;
+}
+.banner-info{
+  text-align: center;
+  h2{
+    color: #3c3c3c;
+    font-size: 32px;
+    font-weight: 400;
+  }
+  p{
+    color: #8c8c8c;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+}
+.buttons {
+  margin: 15px 0;
+  .purchase {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.29);
+    color: #ca4500;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.08px;
+    border: 3px solid #dcdcdc;
+    background-image: linear-gradient(to top, #ff0000, #ffff00);
+  }
+  .purchase:hover{
+    background-image: none;
+  }
+  .tour {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.54);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.08px;
+    background-image: linear-gradient(to top, #0f0, #ff0000);
+  }
+}
+.buttons{
+  a{
+    border-radius: 30px;
+    padding: 15px;
+    border: 3px solid #dcdcdc;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .logo{
+    display: inline-block;
+  }
+  .call{
+    float: right;
+    padding: 3%;
+  }
+}
+@media screen and(min-width: 1010px) {
+  .call{
+    float: right;
+    padding: 2%;
+  }
 }
