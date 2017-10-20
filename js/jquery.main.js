@@ -1,3 +1,7 @@
-/**
- * Created by Tberrov on 19.10.2017.
- */
+$(document).ready(function(){
+    $('.slider').slick({
+        infinite: true,
+        speed: 500,
+        adaptiveHeight: true
+    });
+});

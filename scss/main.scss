@@ -1,47 +1,25 @@
-$breakpoints: (
-  'xs-phone': 320px,
-  'phone': 480px,
-  'tablet': 768px,
-  'desktop': 1024px,
-  'widescreen': 1200px
-);
-
-// keywords
-$media-expressions: (
-  'screen': 'screen',
-  'print': 'print',
-  'handheld': 'handheld',
-  'landscape': '(orientation: landscape)',
-  'portrait': '(orientation: portrait)',
-  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
-  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
-);
-
-// ligatured operators ≥ ≤
-
-@import 'vendors/include-media';
-@import 'vendors/normalize';
-
-@import 'base/variables';
-@import 'base/functions';
-@import 'base/mixins';
-@import 'base/helpers';
-@import 'base/reset';
-@import 'base/typography';
-@import 'base/forms';
-
 *{
   margin: 0;
   padding: 0;
   text-decoration: none;
   outline: none;
   list-style: none;
-  font-family: 'Vollkorn', serif;
+  font-family: 'Open sans', serif;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body{
+  background-image: url("../images/body-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .container{
   width: 100%;
@@ -49,7 +27,8 @@ $media-expressions: (
   padding: 0 10px;
 }
 header{
-  background-color: #ffffff;
+  background-image: url("../images/body-bg.png");
+
 }
 header {
   .logo {
@@ -73,7 +52,10 @@ header {
   }
 }
 .wrapper-hero{
-  background-color: #fcfcfc;
+background-image: url("../images/body-bg.png");
+  .container{
+    background-color: #fcfcfc;
+  }
 }
 .banner-info{
   text-align: center;
@@ -90,7 +72,7 @@ header {
   }
 }
 .buttons {
-  margin: 15px 0;
+  margin: 10px 0 30px;
   .purchase {
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.29);
     color: #ca4500;
@@ -98,27 +80,86 @@ header {
     font-weight: 400;
     line-height: 25.08px;
     border: 3px solid #dcdcdc;
-    background-image: linear-gradient(to top, #ff0000, #ffff00);
+    background: #ff7c00;
   }
-  .purchase:hover{
-    background-image: none;
+  .purchase:hover {
+    background-color: aqua;
+    transition: .5s ease-in-out;
   }
   .tour {
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.54);
-    color: #ffffff;
+    color: #d04c01;
     font-size: 18px;
     font-weight: 400;
     line-height: 25.08px;
-    background-image: linear-gradient(to top, #0f0, #ff0000);
+    background-color: #f2f2f2;
+  }
+  .tour:hover {
+    background: aqua;
+    transition: .5s ease-in-out;
+
   }
 }
 .buttons{
   a{
     border-radius: 30px;
-    padding: 15px;
     border: 3px solid #dcdcdc;
+    padding: 10px;
   }
 }
+.slider{
+  margin-top: 20px;
+  padding-bottom: 30px;
+  position: relative;
+  img{
+    width: 100%;
+  }
+}
+.slick-arrow{
+  width: 0;
+  text-indent: -99999px;
+  background-color: inherit;
+  border: none;
+  position: absolute;
+  left:-999px;
+}
+.services{
+  background-image: url("../images/body-bg.png");
+  .container{
+    background: #ffffff;
+    .services-item{
+      text-align: left;
+      padding: 15px 0;
+      img{
+        float: left;
+        margin: 10px 15px 10px 10px;
+
+      }
+      h3{
+        color: #3c3c3c;
+        font-size: 16px;
+        font-weight: 400;
+      }
+      p{
+        color: #8c8c8c;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+      }
+    }
+  }
+}
+.features{
+  background-image: url("../images/body-bg.png");
+  .container{
+    background-color: #ffffff;
+  }
+}
+
+
+
+
+
 
 @media screen and (min-width: 768px){
   .logo{
@@ -128,8 +169,26 @@ header {
     float: right;
     padding: 3%;
   }
+  .banner-info{
+    width: 48%;
+    display: inline-block;
+    padding: 0 25px 0 15px;
+  }
+  .slider-container{
+    width: 48%;
+    display: inline-block;
+    vertical-align: text-bottom;
+    padding-bottom: 20px;
+    img{
+      width: inherit;
+    }
+  }
 }
 @media screen and(min-width: 1010px) {
+ .container{
+   padding: 0;
+   width: 990px;
+ }
   .call{
     float: right;
     padding: 2%;
